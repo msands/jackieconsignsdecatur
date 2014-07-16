@@ -9,17 +9,30 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="active"><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+          <%= link_to 'Consign <b class="caret"></b>'.html_safe, nil, class: "dropdown-toggle", :data => { toggle: "dropdown" } %>
           <ul class="dropdown-menu">
-            <li><a href="sidebar-left.html">Left Sidebar</a></li>
-            <li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
+            <li><%= link_to "How it works", nil %></li>
+            <li class="active"><%= link_to "Terms", nil %></li>
+            <li><%= link_to "Submit item photo", nil %></li>
+            <li><%= link_to "View my items", nil %></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+        <li class="dropdown">
+          <%= link_to 'Shop <b class="caret"></b>'.html_safe, nil, class: "dropdown-toggle", :data => { toggle: "dropdown" } %>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Store Display", nil %></li>
+            <li><%= link_to "Lighting", nil %></li>
+            <li><%= link_to "Decorative Items", nil %></li>
+            <li class="active"><%= link_to "Art", nil %></li>
+            <li><%= link_to "Tables", nil %></li>
+            <li><%= link_to "Seating", nil %></li>
+          </ul>
+        </li>
+        <li><%= link_to "Contact", nil %></li>
+        <li><%= link_to "SIGN IN/SIGN UP", nil, class: "btn" %></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

@@ -47,11 +47,10 @@
         <div class="col-md-6 widget">
           <div class="widget-body">
             <p class="simplenav">
-              <a href="#">Home</a> | 
-              <a href="about.html">About</a> |
-              <a href="sidebar-right.html">Sidebar</a> |
-              <a href="contact.html">Contact</a> |
-              <b><a href="signup.html">Sign up</a></b>
+              <%= link_to "Home", root_path %> | 
+              <%= link_to "About", about_path %> |
+              <%= link_to "Contact", nil %> |
+              <b><%= link_to "Sign up", nil %></b>
             </p>
           </div>
         </div>
@@ -59,7 +58,7 @@
         <div class="col-md-6 widget">
           <div class="widget-body">
             <p class="text-right">
-              Copyright &copy; 2014, Jackie Consign's Decatur. All rights reserved.<br />
+              Copyright &copy; 2014, <%= link_to "Jackie Consign's Decatur", "http://www.jackieconsignsdecatur.com" %>. All rights reserved.<br />
               Web development by <%= link_to "_celly", "http://marcel.marcelandkim.com", target: "_blank" %>.  Feel free to contact <%= mail_to "marcel.sands84@gmail.com", "via email", subject: "Web Development" %>. 
             </p>
           </div>
