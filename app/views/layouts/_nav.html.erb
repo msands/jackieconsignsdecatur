@@ -32,7 +32,11 @@
           </ul>
         </li>
         <li><%= link_to "Contact", nil %></li>
-        <li><%= link_to "SIGN IN/SIGN UP", nil, class: "btn" %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Account Settings", edit_user_registration_path, class: "btn" %></li>
+        <% else %>
+          <li><%= link_to "SIGN IN/SIGN UP", new_user_session_path, class: "btn" %></li>
+        <% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
