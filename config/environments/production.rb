@@ -80,4 +80,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Configure for devise
+  config.action_mailer.default_url_options = { :host => 'http://jackieconsignsdecatur.herokuapp.com/' }
 end
