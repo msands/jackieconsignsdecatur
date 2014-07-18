@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "index" => "pages#index"
   get "about" => "pages#about"
   get "terms" => "pages#terms"
+  get "consign" => "pages#consign"
 
 end
