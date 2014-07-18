@@ -10,6 +10,7 @@ class ContactsController < ApplicationController
       redirect_to root_path, notice: 'Your message has been sent !'
     else
       render action: 'new'
+    end
   end
 
   private
