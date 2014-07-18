@@ -1,26 +1,30 @@
 
-<form>
-  <div class="row">
-    <div class="col-sm-4">
-      <input class="form-control" type="text" placeholder="Name">
+<%= form_for Contact.new do |f| %>
+
+  <form>
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.text_field :name, class: "form-control", placeholder: "Your Name" %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.email_field :email, class: "form-control", placeholder: "Email Address" %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :subject, class: "form-control", placeholder: "Message Subject" %>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <input class="form-control" type="text" placeholder="Email">
+    <br>
+    <div class="row">
+      <div class="col-sm-12">
+        <%= f.text_area :message, class: "form-control", placeholder: "Your message goes here...", rows: "9" %>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <input class="form-control" type="text" placeholder="Phone">
+    <br>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        <%= f.submit "Send message", class: "btn btn-action" %>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-12">
-      <textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-6 text-right">
-      <input class="btn btn-action" type="submit" value="Send message">
-    </div>
-  </div>
-</form>
+  </form>
+
+<% end %>

@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       UserMailer.contact_message(@contact).deliver
-      redirect_to root_path, notice: 'Your message has been sent !'
+      redirect_to root_path, notice: 'Your message has been sent!'
     else
       render action: 'new'
     end
