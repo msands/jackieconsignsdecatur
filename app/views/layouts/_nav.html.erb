@@ -31,7 +31,7 @@
             <li><%= link_to "Seating", nil %></li>
           </ul>
         </li>
-        <li><%= link_to "Contact", nil %></li>
+        <li><%= link_to "Contact", contacts_new_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Account Settings", edit_user_registration_path, class: "btn" %></li>
         <% else %>
