@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @products = Product.all
@@ -9,14 +11,14 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @product = current_user.products.build
   end
 
   def edit
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = current_user.products.build(product_params)
 
     if @product.save
       redirect_to @product, notice: 'Product successfully added'
@@ -42,6 +44,11 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
+    end
+
+    def correct_user
+      @product = current_user.products.find_by(id: params[:id])
+      redirect_to products_path, notice: "This isn't your product" if @product.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
