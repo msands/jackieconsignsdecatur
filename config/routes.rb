@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :products
+
   resources :contacts, only: [:new, :create]
 
   devise_for :users
