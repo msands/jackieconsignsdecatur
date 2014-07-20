@@ -19,7 +19,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_user.products.build(product_params)
-
     if @product.save
       redirect_to @product, notice: 'Product successfully added'
     else

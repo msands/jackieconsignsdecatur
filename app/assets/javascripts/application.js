@@ -12,11 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require bootstrap.min
+//= require jquery.turbolinks
+//= require masonry/jquery.masonry
 //= require headroom.min
 //= require jQuery.headroom.min
 //= require template
 //= require google-map
 //= require pages
+//= require products
 //= require turbolinks

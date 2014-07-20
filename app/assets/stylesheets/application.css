@@ -13,5 +13,7 @@
  *= require bootstrap.min
  *= require bootstrap-theme
  *= require main
+ *= require 'masonry/transitions'
  *= require pages
+ *= require products
  */
