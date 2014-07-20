@@ -6,7 +6,11 @@
     <%= devise_error_messages! %>
 
     <div class="form-group">
-      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email address" %>
+      <%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.email_field :email, class: "form-control", placeholder: "Email address" %>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
