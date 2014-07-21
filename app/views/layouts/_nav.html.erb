@@ -34,7 +34,7 @@
         <li><%= link_to "Contact", new_contact_path %></li>
         <% if user_signed_in? %>
           <div class="btn-group">
-            <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
               Account <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -51,7 +51,7 @@
             </ul>
           </div>
         <% else %>
-          <li><%= link_to "SIGN IN/SIGN UP", new_user_session_path, class: "btn" %></li>
+          <li><%= link_to "SIGN IN/SIGN UP", new_user_session_path, class: "btn btn-xs" %></li>
         <% end %>
       </ul>
     </div><!--/.nav-collapse -->
