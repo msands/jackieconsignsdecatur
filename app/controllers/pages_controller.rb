@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def consign
   end
+
+  def myitems
+  end
 end
