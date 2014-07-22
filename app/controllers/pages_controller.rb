@@ -14,5 +14,6 @@ class PagesController < ApplicationController
   end
 
   def myitems
+    @products = Product.all
   end
 end
