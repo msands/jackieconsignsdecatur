@@ -12,8 +12,4 @@ class PagesController < ApplicationController
 
   def consign
   end
-
-  def myitems
-    @products = Product.all
-  end
 end

@@ -19,6 +19,10 @@
     <div class="form-group">
       <%= f.text_field :description, class: "form-control", placeholder: "Product Description" %>
     </div>
+
+    <div class="form-group">
+      <%= f.collection_select :product_type, Product.product_type_options, :first, :last, include_blank: true %>
+    </div>
   
     <div>
       <%= f.submit "Submit new product", class: "btn" %>

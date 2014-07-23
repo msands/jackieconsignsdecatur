@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @products = Product.all
+    if params[:product_type].present?
+      @products = Product.where(product_type: params[:product_type])
+    else
+      @products = Product.all
+    end
   end
 
   def show
@@ -52,6 +56,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:description, :image)
+      params.require(:product).permit(:description, :image, :product_type)
     end
 end

@@ -1,4 +1,8 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+
+  resource :my_items, only: :show
+
+  get "myitems" => "my_items#show"
   
   resources :products
 
@@ -11,6 +15,5 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "terms" => "pages#terms"
   get "consign" => "pages#consign"
-  get "myitems" => "pages#myitems"
 
 end
