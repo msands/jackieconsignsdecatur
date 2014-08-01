@@ -1,5 +1,11 @@
 Rails.application.routes.draw do 
 
+  get 'download/index'
+
+  get 'download/pdf'
+
+  get 'download/doc'
+
   resource :my_items, only: :show
 
   get "myitems" => "my_items#show"

@@ -1,2 +1,29 @@
-<h1>Pages#terms</h1>
-<p>Find me in app/views/pages/terms.html.erb</p>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <h2> Terms and Conditions</h2>
+    <h5> Please read and complete this form in its entirety</h5>
+
+    <ul>
+      <li>The standard consignment period runs for 90 days.</li>
+      <li>Markdowns: Reductions are made <strong>25%</strong> after 30 days, <strong>50%</strong> after 60 days and <strong>75%</strong> for the final 15 days.</li>
+      <li>Items priced over $100 will only go to <strong>&half; price</strong> for the final 30 days.  All items are sugject to sales and discounts at the store's discretion.</li>
+      <li>The Consigner receives <strong>40%</strong> of the final selling price of each item they consign unless otherwise stated in this agreement</li>
+
+      <ul>
+        <li>Item priced <strong>$1-$49</strong>, consignor receives <strong>40%</strong> of the selling price.</li>
+        <li>Item priced <strong>$50-$99</strong>, consignor receives <strong>45%</strong> of the selling price.</li>
+        <li>Item priced <strong>$100+</strong>, consignor receives <strong>50%</strong> of the selling price</li>
+      </ul>
+
+      <li>Periodic sales or markdowns of consigned merchandise are offered storewide within the terms of consignment.  You must arrive at least one (1) hour before closing with consigned goods.</li>
+      <li>You may request a check for the items that have sold once the first 60 days after your intial period has commenced, then every 30 days thereafter upon request.  We do not cut checks for less than <strong>$25.00</strong>.  <strong>Account reconciliation begins on the 8th of every month and checks are cut on the 15th.  Check request received after the 8th of every month will be processed in the following month's run.</strong>  If a check needs to be reissued for any reason, a <strong>$40.00</strong> fee will be charged to cover bank and administrative fees; this includes checks that aren't received.  You may use your consignment proceeds as in-house credit anytime you have a positive balance in your account.  You can view your items in your account as they sell by going to our website [<%= link_to "www.jackieconsignsdecatur.com", root_path %>], clicking the consign dropdown and selecting <%= link_to "View My Items", my_items_path %>.  You will need to be logged in to your account to view your items.</li>
+      <li><strong>it is your responsibility to notify us before your 90th day if you intend to pick up any of your unsold items.  You must make an appointment to collect your unsold items.</strong>  If you do not contact us one (1) calendar week before the end of your 90 day consignment period or you do not show up for your appointment date, our items become property of Jackie's Consignment and may be marked down or donated.  <strong>You must return within 3 days to pick up any items that were not identified as "Return" at the time of drop off or those items may be donated.  We simply do not have the room to store inactive inventory.</strong></li>
+      <li><strong>We do not accept fake designer or knockoff items.</strong>  By signing this agreement, you verify that, without question, all of the items you are consigning with us are genuine articles.  Payouts for typical knockoff items will be delayed by a minimum of two (2) weeks from the selling date to allow time for the customer to verify the item they have purchased is authentic.  The consignor indemnifies Jackie's Consignment, its affiliates, employees and owners.  Any refunds, legal fees and related costs associated with righting the sale of a fraudulent item is  the responsibility of the consignor.</li>
+      <li>Jackie's Consignment or any of its affiliates, employees and owner are not responsible for loss of property due to theft, fire or damage of any kind.  These terms and conditions may be changed or altered without notice.  We post the most recent copy of our terms and conditions on our <%= link_to "website", terms_path %> in order to facilitate keeping you informed.
+      <li><%= link_to "Download Consignment Contract", download_doc_path %></li>
+    </ul>
+
+  </div>
+</div>
