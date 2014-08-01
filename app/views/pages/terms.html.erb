@@ -1,6 +1,6 @@
 
 <div class="container">
-  <div class="jumbotron">
+  <div class="jumbotron top-space">
 
     <h2> Terms and Conditions</h2>
     <h5> Please read and complete this form in its entirety</h5>
@@ -22,8 +22,11 @@
       <li><strong>it is your responsibility to notify us before your 90th day if you intend to pick up any of your unsold items.  You must make an appointment to collect your unsold items.</strong>  If you do not contact us one (1) calendar week before the end of your 90 day consignment period or you do not show up for your appointment date, our items become property of Jackie's Consignment and may be marked down or donated.  <strong>You must return within 3 days to pick up any items that were not identified as "Return" at the time of drop off or those items may be donated.  We simply do not have the room to store inactive inventory.</strong></li>
       <li><strong>We do not accept fake designer or knockoff items.</strong>  By signing this agreement, you verify that, without question, all of the items you are consigning with us are genuine articles.  Payouts for typical knockoff items will be delayed by a minimum of two (2) weeks from the selling date to allow time for the customer to verify the item they have purchased is authentic.  The consignor indemnifies Jackie's Consignment, its affiliates, employees and owners.  Any refunds, legal fees and related costs associated with righting the sale of a fraudulent item is  the responsibility of the consignor.</li>
       <li>Jackie's Consignment or any of its affiliates, employees and owner are not responsible for loss of property due to theft, fire or damage of any kind.  These terms and conditions may be changed or altered without notice.  We post the most recent copy of our terms and conditions on our <%= link_to "website", terms_path %> in order to facilitate keeping you informed.
-      <li><%= link_to "Download Consignment Contract", download_doc_path %></li>
     </ul>
+
+    <div class="text-center">
+      <%= link_to "Download Consignment Contract", download_doc_path, class: "btn btn-default", target: "_blank" %>
+    </div>
 
   </div>
 </div>
