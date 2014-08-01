@@ -9,7 +9,7 @@ class UserMailer < ActionMailer::Base
   def contact_message(contact)
     @contact = contact
 
-    mail to: "suberina.jocelyn@gmail.com",
+    mail to: "jackieconsignsdecatur@yahoo.com",
       cc: contact.email,
       subject: contact.subject
   end
